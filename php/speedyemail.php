@@ -8,13 +8,13 @@ if(isset($_POST['submit'])){
     $subject = "Form submission";
     $subject2 = "Copy of your form submission";
     $message = $first_name . " " . $last_name . " " . $phone ."\n\n" . $_POST['message'] . "\n\n" . $_POST['message2'];
-    $message2 = "Obrigado pelo seu contacto " ."\n\n" . $first_name . " " . $last_name . " " . $phone . "\n\n" . $_POST['message'] . "\n\n" . $_POST['message2'];
+    $message2 = "Obrigado pelo seu contacto " ."\n\n" . $first_name . " " . $last_name . " " . $phone . "\n\n" . $_POST['message'];
 
     $headers = "From:" . $from;
     $headers2 = "From:" . $to;
     mail($to,$subject,$message,$headers);
     mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-    echo "Email enviado. Obrigado" . $first_name . "\n\n" ."Iremos contacta-lo em breve.";
+    echo "Obrigado" . $first_name . ", enviamos tam bém uma copia para si."."\n\n" ."Em breve entraremos em contato.";
     // You can also use header('Location: thank_you.php'); to redirect to another page.
     }
 ?>
