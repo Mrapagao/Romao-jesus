@@ -14,7 +14,7 @@ if(isset($_POST['submit'])){
     $headers2 = "From:" . $to;
     mail($to,$subject,$message,$headers);
     mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-    echo "Obrigado" . $first_name . ", enviamos tam bém uma copia para si."."\n\n" ."Em breve entraremos em contato.";
+    echo "Obrigado" . $first_name . ", enviamos também uma copia para si."."\n\n" ."Em breve entraremos em contato.";
     // You can also use header('Location: thank_you.php'); to redirect to another page.
     }
 ?>
